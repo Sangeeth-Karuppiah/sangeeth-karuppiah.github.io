@@ -119,6 +119,75 @@
             border-left: 4px solid #ffc107;
             margin: 20px 0;
         }
+
+                .media {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            margin: 40px 0;
+            border-radius: 12px;
+        }
+        
+        .media h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        
+        .media > p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .media-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .media-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .media-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        .media-content ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .media-content li {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+        
+        .media-content .source {
+            margin-top: 20px;
+            font-size: 0.85em;
+            font-style: italic;
+            opacity: 0.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 15px;
+        }
         footer {
             text-align: center;
             padding: 30px;
@@ -262,6 +331,41 @@
                     <li>Worked closely with cross-functional teams to address engineering challenges and meet design goals</li>
                     <li><strong>Impact:</strong> Successfully facilitated proto vehicle preparation for testing and concept showcases</li>
                 </ul>
+            </div>
+        </section>
+
+                <section class="media">
+            <h2>🎬 Media & Recognition</h2>
+            <p>Both product launches received extensive media coverage and industry recognition, highlighting their market impact and engineering innovation.</p>
+            
+            <div class="media-grid">
+                <div class="media-card">
+                    <h3>🏆 Mahindra Thar 2020 Launch</h3>
+                    <div class="media-content">
+                        <p><strong>Launch Event:</strong> Unveiled on India's Independence Day (August 15, 2020) with nationwide media coverage</p>
+                        <ul>
+                            <li><strong>Market Response:</strong> Received 75,000 bookings within first year and 36,000+ enquiries in first week</li>
+                            <li><strong>First Unit Auction:</strong> First unit sold for ₹1.11 crore (approx. $148,000 USD) at charity auction</li>
+                            <li><strong>Press Coverage:</strong> Featured in Autocar India, Times of India, PTI, and major automotive publications</li>
+                            <li><strong>Recognition:</strong> Praised for "quantum leaps in Performance, Comfort, Technology & Safety" while maintaining legendary off-roading capability</li>
+                        </ul>
+                        <p class="source">Sources: Mahindra Press Release, Autocar India, Times of India</p>
+                    </div>
+                </div>
+                
+                <div class="media-card">
+                    <h3>⚡ Jeep Cherokee HEV 2025 Launch</h3>
+                    <div class="media-content">
+                        <p><strong>Launch Timeline:</strong> Announced May 2025, production Q3 2025, deliveries late 2025</p>
+                        <ul>
+                            <li><strong>Industry Significance:</strong> All-new Cherokee "reimagined from the ground up" as hybrid-only platform</li>
+                            <li><strong>Technical Innovation:</strong> New hybrid powertrain with 210 HP, 230 lb-ft torque, 37 MPG combined, 500-mile range</li>
+                            <li><strong>Press Coverage:</strong> Featured in CNBC, Stellantis official announcements, automotive trade publications</li>
+                            <li><strong>Strategic Positioning:</strong> Positioned between Compass and Grand Cherokee to strengthen mainstream SUV lineup</li>
+                        </ul>
+                        <p class="source">Sources: Stellantis Press Release, CNBC, Wards Auto</p>
+                    </div>
+                </div>
             </div>
         </section>
 
