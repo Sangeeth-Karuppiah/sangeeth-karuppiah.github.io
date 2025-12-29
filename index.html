@@ -198,6 +198,15 @@
 </head>
 <body>
     <header>
+
+                /* Hover-to-expand functionality for details elements */
+        details:hover {
+            cursor: pointer;
+        }
+        
+        details:not([open]):hover {
+            opacity: 0.8;
+        }
         <h1>Sangeeth Gunalan Karuppiah, MBA</h1>
         <div class="subtitle">Automotive Engineering Leader | EV Systems | Product Launch Specialist</div>
         <p style="margin: 15px 0; font-size: 1.05em;">Windsor, ON, Canada | MBA Certified | 8+ Years Experience</p>
@@ -997,5 +1006,23 @@
     <footer>
         <p>&copy; 2025 Sangeeth Karuppiah. Built with passion for automotive innovation.</p>
     </footer>
+
+<script>
+    // Hover-to-expand functionality for details elements
+    document.querySelectorAll('details').forEach(function(details) {
+        let hoverTimeout;
+        
+        details.addEventListener('mouseenter', function() {
+            hoverTimeout = setTimeout(function() {
+                details.setAttribute('open', '');
+            }, 300); // 300ms delay before opening
+        });
+        
+        details.addEventListener('mouseleave', function() {
+            clearTimeout(hoverTimeout);
+            details.removeAttribute('open');
+        });
+    });
+</script>
 </body>
 </html>
