@@ -440,22 +440,84 @@
                     <!-- KM74 Jeep Cherokee HEV - BlueNexus EVT Transmission Testing POC -->
                     <details style="margin-top: 15px; padding: 15px; background: #fff8f0; border-radius: 6px; border: 1px solid #fed7aa;">
                         <summary style="cursor: pointer; font-weight: bold; color: #c05621; padding: 8px; background: #fef2e8; border-radius: 4px;">
-				🚘 KM74 Jeep Cherokee HEV - BlueNexus EVT Transmission                        </summary>
-                        <div style="padding: 10px; margin-top: 10px;">
-					<p><strong>Objective:</strong> Validate BlueNexus EVT transmission performance in KM74 Jeep Cherokee HEV for Production Phase sign-off</p>                            <p><strong>Challenge:</strong> Traditional EVT dyno testing required extended timelines and high facility booking costs</p>
-					<p><strong>Challenge:</strong> Complex hybrid powertrain integration requiring comprehensive validation across multiple operating modes</p>                            <ul style="margin-left: 20px;">
-					<p><strong>Solution:</strong></p>                                <li>Identified critical test cases for early validation</li>
-							<li>Conducted EVT-level transmission testing across HEV drive modes (EV, Hybrid, Engine-only)</li>                                <li>Created automated data collection and analysis workflow</li>
-							<li>Validated transmission shift quality, NVH performance, and thermal management under production scenarios</li>                            <p><strong>Results:</strong></p>
-                            <div style="background: #e6ffed; padding: 10px; border-left: 3px solid #38a169; margin: 10px 0;">
-                                <ul style="margin: 5px 0 0 20px;">
-							<li>Successfully validated all transmission performance criteria for Production Phase approval</li>                                    <li>Saved <strong>$150k+</strong> in facility costs</li>
-							<li>Identified and resolved 15+ critical issues before production launch, reducing warranty risk</li>                                    <li>Improved supplier collaboration through faster feedback</li>
-							<li>Accelerated validation timeline by 20% through optimized test sequencing and data analysis</li>                            </div>
-					<p><strong>Technologies Used:</strong> Transmission dynamometer testing, CAN bus diagnostics, INCA calibration software, Vector CANalyzer, Thermal imaging</p>                        </div>
-                    </details>
-
-                    <!-- Project 2: Hybrid Transmission DFMEA Development -->
+				🚘 441
+<details style="margin-top: 15px; padding: 15px; background: #fff8f0; border-radius: 6px; border: 1px solid #fed7aa;">
+				<summary style="cursor: pointer; font-weight: bold; color: #c05621; padding: 8px; background: #fef2e8; border-radius: 4px;">
+					🚘 KM Platform – Hybrid EVT Integration & Validation (Jeep Cherokee HEV)
+				</summary>
+				<div style="padding: 10px; margin-top: 10px;">
+					<p style="font-style: italic; color: #666; margin-bottom: 15px;"><strong>Target Role:</strong> Engineering Manager / Validation Lead | System ownership of hybrid Electric Variable Transmission (EVT) across requirements → DVP&R → CAE/bench/dyno/vehicle → sign-off</p>
+					
+					<h4 style="color: #c05621; margin-top: 15px;">📋 Program Overview</h4>
+					<div style="background: #f0f9ff; padding: 12px; border-left: 3px solid #0284c7; margin: 10px 0; border-radius: 4px;">
+						<p><strong>Vehicle Platform:</strong> Modern Jeep SUV (KM) | Wheelbase 2870mm, Length 4717mm | Atlantis High E/E architecture (CAN-FD, L4 cybersecurity) | ADAS L2 at launch</p>
+						<p><strong>Powertrain:</strong> 1.6L I4 EP6 Turbo (132kW @ 5500rpm, 300Nm @ 2000-3500rpm) + BlueNexus EVT (Large) | No 12V starter/alternator (crank via e-machine, DC/DC within PCU)</p>
+						<p><strong>Driveline Variants:</strong> AWD with rear disconnect (FDR 4.158) | Trailhawk 4×4 with low-range & rear locker (FDR 4.444, 4WD Neutral for flat-tow)</p>
+						<p><strong>Hybrid Pack:</strong> ~1.03kWh, 254V nominal/307V max, 1P69S, 10s @ EOL ≈ 40kW discharge, liquid-cooled, cold-start support beyond -30°C</p>
+					</div>
+					
+					<h4 style="color: #c05621; margin-top: 20px;">🎯 My Role & Accountability</h4>
+					<ul style="margin-left: 20px; line-height: 1.8;">
+						<li><strong>System DVP&R Ownership (ID 7D001):</strong> Built and maintained system-level EVT DVP&R across ED/DV/PV stages (performance objective → method → acceptance reference → responsibility → timing → status). Ensured alignment to DRBTR/EBP/FM VSS/TTS references and governance</li>
+						<li><strong>Worst-Case Selection Logic:</strong> For each test, selected AWD/Trailhawk intents using grade torque, FDR/tire OD, GCWR/GVWR, rotational-speed envelopes and survivability criteria; documented "evidence-to-proceed" gates before spending dyno/vehicle time</li>
+						<li><strong>Execution Orchestration:</strong> Sequenced CAE → bench → dyno (E10/E14) → vehicle with explicit transition times and calibration drops; parallelized streams to protect critical path</li>
+						<li><strong>Architecture-Aware Deviations:</strong> Drove NA/MODIFIED/ADDED rulings where classic AT tests (e.g., torque-converter, friction-clutch, snap-ring) do not apply to EVT; captured approvals and acceptance adaptations in DVP&R</li>
+						<li><strong>Cross-Functional Triage:</strong> Ran weekly issue reviews with Calibration, Controls, NVH, Platform, Supplier, Aerothermal, EMC — standard loop: reproduce → bound → fix → verify — and tracked resolution in DVP status</li>
+						<li><strong>Reporting & Sign-Off:</strong> Produced Section-E summaries (actuals, % complete, pass/deviation) and gate decks. Representative snapshot during DV/PV: ~44 PASS / 5 Approved Deviations / 2 LATE / ~50 TO-DO</li>
+					</ul>
+					
+					<h4 style="color: #c05621; margin-top: 20px;">🔬 Validation Strategy & Execution</h4>
+					<div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #e5e7eb; margin: 10px 0;">
+						<p><strong>ED / CAE & Analytical:</strong> Powertrain bending & impact, critical speed, mount & adapter interface loads, thermal/cooling simulations, oil level & lube distribution, torsional modeling — used as "evidence-to-proceed" gates to reduce hardware iteration</p>
+					</div>
+					<div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #e5e7eb; margin: 10px 0;">
+						<p><strong>DV / Functional & Controls:</strong></p>
+						<ul style="margin-left: 20px;">
+							<li>Neutral behavior: Neutral drag (4WD bench) and vehicle neutral creep/run-up to enforce "no movement" and protect transfer-case constraints</li>
+							<li>Torque management & speed limits: Verified input/output torque caps (7P022) and max speed in gear; EV-only reverse behavior checks</li>
+							<li>Park-by-wire & interlocks: Starter/brake-shift interlock logic, PBW fail-safes, rollback windows, drop-in speed characterization</li>
+						</ul>
+					</div>
+					<div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #e5e7eb; margin: 10px 0;">
+						<p><strong>DV / Durability & Corner-Cases:</strong> PT8 dyno endurance (life-equivalent), differential seizure/fatigue, wheel/power-hop survivability, WOT/high-speed reverse robustness, and ATF water-content durability</p>
+					</div>
+					<div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #e5e7eb; margin: 10px 0;">
+						<p><strong>Vehicle Environmental, Thermal & NVH:</strong> Underbody temperature exposure, cooling performance, water-fording / slush / mud, resonance / acoustic, and hot/cold/altitude trip drivability</p>
+					</div>
+					<div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #e5e7eb; margin: 10px 0;">
+						<p><strong>PV / Compliance & Serviceability:</strong> FMVSS-aligned interlocks (start/shift/braking), transmission braking effect, traceability & limited flammability scope; service hoist review and fluid-fill validation</p>
+					</div>
+					
+					<h4 style="color: #c05621; margin-top: 20px;">💼 Manager-Level Outcomes</h4>
+					<div style="background: #e6ffed; padding: 12px; border-left: 3px solid #38a169; margin: 10px 0; border-radius: 4px;">
+						<ul style="margin-left: 20px; line-height: 1.8;">
+							<li><strong>Hybrid-Aware Plan vs. Legacy AT:</strong> Rewrote generic matrix into EVT-appropriate DVP&R with explicit NA/MODIFIED decisions (e.g., clutch/TCC tests removed or re-scoped), cutting non-value test attempts and focusing staff on EVT-critical risks</li>
+							<li><strong>Schedule Adherence via Orchestration:</strong> Locked run-order with parallel dyno/vehicle streams, explicit transition buffers, and calibration drop hold-points; reduced idle time and prevented resource collisions</li>
+							<li><strong>Faster Issue Closure:</strong> Standardized reproduce → bound → fix → verify; embedded lightweight CAN logging and templated checklists; accelerated PASS conversions in park/neutral/torque-limit areas</li>
+							<li><strong>Institutionalized Patterns:</strong> Documented worst-case selection logic (grade/FDR/tire/speed/weight), acceptance framing, and gate artifacts so future hybrid programs can reuse the method without re-learning costs</li>
+						</ul>
+					</div>
+					
+					<h4 style="color: #c05621; margin-top: 20px;">🔧 Day-to-Day Management</h4>
+					<p style="margin-left: 20px;"><strong>People & Interfaces:</strong> Calibration, Controls, NVH, CAE, Platform, Supplier, Aerothermal, EMC. Set weekly priorities, cleared blockers, drove clarity on "what passes" vs. "what is modified"</p>
+					<p style="margin-left: 20px;"><strong>Assets & Logistics:</strong> Dyno cells (E10/E14), AWD/4×4 mules, sample rotation, transition times, and gated starts keyed to software readiness</p>
+					<p style="margin-left: 20px;"><strong>Data & Decisions:</strong> Short decision logs tied to DVP line items; Section-E rollups for gates; deviations with rationale and approval chain recorded</p>
+					
+					<h4 style="color: #c05621; margin-top: 20px;">🛠️ Tools & Methods</h4>
+					<div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0;">
+						<span style="background: #e3f2fd; padding: 6px 12px; border-radius: 4px; font-size: 0.9em; border: 1px solid #2196f3;">DVP&R authoring & governance</span>
+						<span style="background: #e8f5e9; padding: 6px 12px; border-radius: 4px; font-size: 0.9em; border: 1px solid #4caf50;">MS Project / Gantt</span>
+						<span style="background: #f3e5f5; padding: 6px 12px; border-radius: 4px; font-size: 0.9em; border: 1px solid #9c27b0;">Python (pandas/matplotlib)</span>
+						<span style="background: #fff3e0; padding: 6px 12px; border-radius: 4px; font-size: 0.9em; border: 1px solid #ff9800;">CAN tools</span>
+						<span style="background: #fce4ec; padding: 6px 12px; border-radius: 4px; font-size: 0.9em; border: 1px solid #e91e63;">EBP/DRBTR references</span>
+						<span style="background: #e0f2f1; padding: 6px 12px; border-radius: 4px; font-size: 0.9em; border: 1px solid #009688;">A3 decision logs</span>
+					</div>
+					
+					<div style="background: #fffde7; padding: 12px; border-radius: 6px; border: 1px solid #fbc02d; margin-top: 15px;">
+						<p style="font-size: 0.9em; margin: 0;"><strong>⚠️ Note:</strong> This portfolio section is sanitized: no VINs, part numbers, supplier drawings, calibration maps, or numeric acceptance targets. Program-level facts are summarized from official documentation; validation scope/status and methods reflect the system DVP&R (7D001) ownership.</p>
+					</div>
+				</div>
+			</details>
                     <details style="margin-top: 15px; padding: 15px; background: #f0f9ff; border-radius: 6px; border: 1px solid #bfdbfe;">
                         <summary style="cursor: pointer; font-weight: bold; color: #1e40af; padding: 8px; background: #eff6ff; border-radius: 4px;">
                             ⚙️ Project 2: System-Level DFMEA for Hybrid Transmission
